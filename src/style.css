@@ -431,3 +431,326 @@ body,body *{font-family:Roboto,Helvetica,Arial,sans-serif!important}
 @media(max-width:900px){.aim-layout{grid-template-columns:.8fr 1.2fr;gap:35px}.aim-phone-stage{min-height:590px}.aim-phone-stage>img{height:550px;width:92%}.aim-heading .section-title{font-size:68px}.aim-paragraph{grid-template-columns:35px 1fr;gap:13px;padding:19px 17px;font-size:15px}}
 @media(max-width:640px){.aim{padding-block:67px}.aim-layout{grid-template-columns:1fr;gap:37px}.aim-phone-stage{position:relative;top:auto;min-height:495px;max-height:520px;box-shadow:7px 7px 0 #2e874f}.aim-phone-stage:before{width:290px;height:290px}.aim-phone-stage>img{width:min(78%,290px);height:465px}.aim-phone-label{top:15px;left:15px;font-size:9px}.aim-phone-caption{right:12px;bottom:12px;font-size:10px}.aim-content{padding-top:0}.aim-heading{margin-bottom:25px}.aim-heading .section-title{font-size:68px;margin-top:16px}.aim-copy{gap:11px}.aim-paragraph{grid-template-columns:30px 1fr;gap:11px;padding:17px 15px;font-size:15px;line-height:1.75}.aim-paragraph-num{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.aim-phone-stage:before,.aim-phone-stage>img,.aim-paragraph{animation:none!important;transition:none!important;transform:none!important}}
+
+/* Stack the hero narrative above the app screens on every viewport. */
+.hero{min-height:0;padding:66px 0 44px;background:#fff;overflow:hidden}
+.hero-inner{width:min(1160px,calc(100% - 64px));display:flex;flex-direction:column;align-items:stretch;gap:36px}
+.hero-copy{width:100%;max-width:930px;margin:0 auto;padding:0;text-align:center}
+.hero-eyebrow{justify-content:center;margin-bottom:21px}
+.hero-copy h1{max-width:none;margin:0 auto 20px;font-size:clamp(70px,8vw,104px);line-height:.91;text-align:center}
+.hero-lede{max-width:800px;margin:0 auto 22px;text-align:center;font-size:18px;line-height:1.7}
+.hero-actions{justify-content:center;gap:21px}
+.hero-scroll-note{justify-content:center;margin-top:25px}
+.hero-product{width:100%;min-height:475px;border-radius:6px;overflow:hidden;background:radial-gradient(ellipse at 50% 10%,#78dc9770 0%,transparent 34%),radial-gradient(ellipse at 7% 100%,#26d16748 0%,transparent 34%),radial-gradient(ellipse at 93% 100%,#fbdfad37 0%,transparent 31%),linear-gradient(118deg,#2e874f 0%,#246f41 46%,#175c36 100%);box-shadow:0 18px 0 #fbdfad,0 28px 60px #1b573922}
+.hero-product:before{width:min(55vw,670px);border-color:#f5fff04d;box-shadow:0 0 0 36px #ffffff11,0 0 0 74px #ffffff0b,0 0 0 114px #ffffff07}
+.hero-product:after{width:min(40vw,500px);background:radial-gradient(ellipse,#fbdfad33 0%,#26d1671a 45%,transparent 72%);filter:blur(10px)}
+.hero-product-label{left:28px;right:auto;top:25px;color:#f5fff1;font-size:11px;letter-spacing:1.4px}
+.hero-product-pulse{background:#fbdfad;box-shadow:0 0 0 0 #fbdfad77}
+.hero-phones{height:435px;gap:0}
+.hero-phone{width:220px;height:420px;filter:drop-shadow(0 23px 20px #102d1c5c)}
+.hero-phone-1{transform:translateX(44px) rotate(-7deg) scale(.84)}
+.hero-phone-2{transform:translateY(-8px) scale(1.04)}
+.hero-phone-3{transform:translateX(-44px) rotate(7deg) scale(.84)}
+.hero-product-caption{bottom:16px;background:#fffaf0;color:#183c2a;border:1px solid #ffffffa8;box-shadow:0 7px 22px #0b311b25}
+.hero-product-caption span{color:#4e0d13}.hero-product-caption b{color:#1d432b}
+@media(max-width:900px){.hero-inner{width:calc(100% - 48px);gap:30px}.hero-copy h1{font-size:clamp(65px,9vw,88px)}.hero-lede{font-size:16px}.hero-product{min-height:415px}.hero-phones{height:382px}.hero-phone{width:184px;height:365px}.hero-phone-1{transform:translateX(39px) rotate(-7deg) scale(.83)}.hero-phone-2{transform:translateY(-6px) scale(1.03)}.hero-phone-3{transform:translateX(-39px) rotate(7deg) scale(.83)}}
+@media(max-width:640px){.hero{padding:46px 0 37px}.hero-inner{width:calc(100% - 36px);gap:23px}.hero-copy{text-align:center}.hero-eyebrow{font-size:9px;letter-spacing:1.1px;margin-bottom:20px}.hero-copy h1{font-size:clamp(57px,13.5vw,76px);letter-spacing:-.075em;line-height:.94;margin-bottom:17px}.hero-lede{font-size:15px;line-height:1.68;margin-bottom:19px}.hero-actions{gap:13px}.hero-copy .button{min-height:48px;padding:12px 15px;font-size:13px}.hero-tagline{font-size:11px}.hero-scroll-note{margin-top:18px;font-size:10px}.hero-product{min-height:350px;border-radius:4px;box-shadow:0 8px 0 #fbdfad,0 18px 32px #1b573922}.hero-product:before{width:250px;box-shadow:0 0 0 23px #ffffff11,0 0 0 47px #ffffff0b}.hero-product:after{width:215px}.hero-product-label{left:12px;top:13px;right:auto;font-size:7px;letter-spacing:.9px}.hero-phones{height:310px;margin-top:14px}.hero-phone{width:128px;height:278px;filter:drop-shadow(0 14px 12px #102d1c54)}.hero-phone-1{transform:translateX(28px) rotate(-7deg) scale(.82)}.hero-phone-2{transform:translateY(-3px) scale(1.01)}.hero-phone-3{transform:translateX(-28px) rotate(7deg) scale(.82)}.hero-product-caption{bottom:8px;padding:8px 11px;gap:8px}.hero-product-caption span{font-size:8px}.hero-product-caption b{font-size:10px}}
+
+/* Replace the rectangular phone stage with a rainbow-like half-oval shade. */
+.hero{padding-bottom:0}
+.hero-inner{gap:17px}
+.hero-product{position:relative;min-height:500px;margin:0 calc((1160px - 100vw)/2);width:100vw;max-width:none;overflow:hidden;border-radius:0;background:transparent;box-shadow:none;isolation:isolate}
+.hero-product:before{content:"";position:absolute;z-index:-1;left:50%;top:auto;right:auto;bottom:-430px;transform:translateX(-50%);width:min(1500px,136vw);height:930px;border:0;border-radius:50%;background:radial-gradient(ellipse 68% 100% at 50% 100%,#2e874f 0 40%,#26d167 40.4% 46.5%,#fbdfad 46.9% 53%,#b9dfc3 53.4% 60%,#e7f4ea 60.4% 68%,#fff 68.4% 100%);box-shadow:none;animation:arc-glow 8s ease-in-out infinite alternate}
+.hero-product:after{content:"";position:absolute;z-index:-1;left:50%;top:auto;right:auto;bottom:-333px;transform:translateX(-50%);width:min(930px,82vw);height:670px;border:1px solid #ffffff3f;border-radius:50%;background:transparent;filter:none;box-shadow:0 0 0 16px #ffffff0a;pointer-events:none}
+.hero-product-label{left:max(28px,calc((100vw - 1160px)/2 + 18px));top:48px;color:#2e874f}
+.hero-product-pulse{background:#26d167;box-shadow:0 0 0 0 #26d16755}
+.hero-phones{position:relative;z-index:1;height:465px;padding-top:25px}
+.hero-phone{filter:drop-shadow(0 24px 18px #14352035)}
+.hero-product-caption{bottom:17px;z-index:2;background:#fff;border:1px solid #dce8dd;box-shadow:0 9px 24px #153b2b22}
+.hero-product-caption span{color:#4e0d13}.hero-product-caption b{color:#194e30}
+@keyframes arc-glow{from{filter:saturate(.96);transform:translateX(-50%) scale(1)}to{filter:saturate(1.08);transform:translateX(-50%) scale(1.012)}}
+@media(max-width:1200px){.hero-product{margin-inline:calc((100% - 100vw)/2)}}
+@media(max-width:640px){.hero{padding-bottom:0}.hero-inner{gap:15px}.hero-product{min-height:365px;margin-inline:calc((100% - 100vw)/2);width:100vw}.hero-product:before{bottom:-250px;width:900px;height:560px;background:radial-gradient(ellipse 68% 100% at 50% 100%,#2e874f 0 40%,#26d167 40.5% 46%,#fbdfad 46.5% 53%,#b9dfc3 53.5% 60%,#e7f4ea 60.5% 68%,#fff 68.5% 100%)}.hero-product:after{bottom:-195px;width:570px;height:420px}.hero-product-label{left:20px;top:18px;font-size:7px}.hero-phones{height:326px;padding-top:20px}.hero-phone{filter:drop-shadow(0 16px 13px #14352035)}.hero-product-caption{bottom:7px}}
+@media(prefers-reduced-motion:reduce){.hero-product:before{animation:none!important;filter:none!important}}
+
+/* Let the oval/rainbow shade fill the entire phone stage, through to the next section. */
+.hero-product{background:radial-gradient(ellipse 90% 180% at 50% 100%,#2e874f 0 69%,#26d167 69.4% 76%,#fbdfad 76.4% 82%,#b9dfc3 82.4% 90%,#e7f4ea 90.4% 100%)}
+.hero-product:before,.hero-product:after{display:none}
+@media(max-width:640px){.hero-product{background:radial-gradient(ellipse 120% 165% at 50% 100%,#2e874f 0 67%,#26d167 67.4% 74%,#fbdfad 74.4% 81%,#b9dfc3 81.4% 89%,#e7f4ea 89.4% 100%)}}
+
+/* Lighter hero shade with a clear edge against the deep-green overview. */
+.hero-product{background:radial-gradient(ellipse 90% 180% at 50% 100%,#b9dfc3 0 69%,#e7f4ea 69.4% 76%,#fbdfad 76.4% 82%,#d7efdd 82.4% 90%,#fff 90.4% 100%);border-bottom:8px solid #fbdfad}
+@media(max-width:640px){.hero-product{background:radial-gradient(ellipse 120% 165% at 50% 100%,#b9dfc3 0 67%,#e7f4ea 67.4% 74%,#fbdfad 74.4% 81%,#d7efdd 81.4% 89%,#fff 89.4% 100%)}}
+
+/* Give the hero devices more scale while preserving their breathing room. */
+.hero-product{min-height:570px}
+.hero-phones{height:530px}
+.hero-phone{width:258px;height:505px}
+.hero-phone-1{transform:translateX(52px) rotate(-7deg) scale(.84)}
+.hero-phone-2{transform:translateY(-8px) scale(1.04)}
+.hero-phone-3{transform:translateX(-52px) rotate(7deg) scale(.84)}
+@media(max-width:900px){.hero-product{min-height:475px}.hero-phones{height:430px}.hero-phone{width:210px;height:410px}.hero-phone-1{transform:translateX(43px) rotate(-7deg) scale(.82)}.hero-phone-2{transform:translateY(-6px) scale(1.02)}.hero-phone-3{transform:translateX(-43px) rotate(7deg) scale(.82)}}
+@media(max-width:640px){.hero-product{min-height:390px}.hero-phones{height:347px}.hero-phone{width:148px;height:318px}.hero-phone-1{transform:translateX(31px) rotate(-7deg) scale(.82)}.hero-phone-2{transform:translateY(-3px) scale(1.01)}.hero-phone-3{transform:translateX(-31px) rotate(7deg) scale(.82)}}
+
+/* Readability pass: lift supporting copy and controls across breakpoints. */
+body{font-size:17px}
+.nav-ribbon-inner{font-size:12px}
+.nav-link{font-size:15px}
+.nav-cta{font-size:14px}
+.section-kicker{font-size:12px}
+.section-title{font-size:clamp(52px,6.2vw,80px)}
+.overview-text>p,.showcase-copy>p,.modules-heading>p,.aim-paragraph,.module-card>p,.impact-copy-card p,.impact-board-heading p,.impact-hero-copy>p,.impact-preview .text-link,.text-link{font-size:17px}
+.feature-card h3,.module-card h3{font-size:22px}
+.feature-card p{font-size:16px;line-height:1.8}
+.impact-tile h3,.sdg-card h2,.impact-copy-card h2{font-size:18px}
+.trusted-inner .section-title{font-size:clamp(42px,4.5vw,62px)}
+.download-copy>p{font-size:18px}
+.download-store-link{font-size:15px}
+.download-qr-card>p{font-size:14px}.download-qr-card>a{font-size:13px}
+.footer-contact a{font-size:14px}.footer-bottom{font-size:12px}
+.aim-paragraph{line-height:1.85}
+.story-copy h2{font-size:clamp(30px,3.4vw,42px)}
+.story-copy>p{font-size:16px;line-height:1.9}
+@media(max-width:640px){body{font-size:16px}.nav-ribbon-inner{font-size:10px}.nav-link{font-size:15px}.nav-cta{font-size:14px}.section-kicker{font-size:11px}.section-title{font-size:clamp(45px,11vw,60px)}.hero-lede{font-size:17px;line-height:1.75}.hero-copy .button{font-size:15px}.hero-tagline{font-size:13px}.overview-text>p,.showcase-copy>p,.modules-heading>p,.aim-paragraph,.module-card>p,.impact-copy-card p,.impact-board-heading p,.impact-hero-copy>p,.download-copy>p{font-size:16px;line-height:1.8}.feature-card h3,.module-card h3{font-size:21px}.feature-card p{font-size:16px}.impact-tile h3{font-size:14px}.sdg-card h2{font-size:14px}.impact-copy-card h2{font-size:20px}.trusted-inner .section-title{font-size:48px}.text-link{font-size:14px}.download-copy h2{font-size:clamp(48px,11.5vw,66px)}.download-qr-card>p{font-size:13px}.download-qr-card>a{font-size:12px}.footer-contact a{font-size:12px}.footer-bottom{font-size:11px}.story-copy h2{font-size:28px}.story-copy>p{font-size:15px;line-height:1.85}}
+
+/* Stronger type scale for clear reading at a glance. */
+body{font-size:18px}
+.nav-ribbon-inner{font-size:13px}
+.nav-link{font-size:16px}
+.nav-cta{font-size:15px}
+.section-kicker,.hero-eyebrow{font-size:13px}
+.hero-lede{font-size:20px;line-height:1.75}
+.hero-copy .button{font-size:16px;min-height:58px}
+.hero-tagline{font-size:16px}
+.hero-scroll-note{font-size:14px}
+.overview-text>p,.showcase-copy>p,.modules-heading>p,.aim-paragraph,.module-card>p,.impact-copy-card p,.impact-board-heading p,.impact-hero-copy>p,.download-copy>p,.story-copy>p{font-size:18px;line-height:1.82}
+.feature-card h3,.module-card h3{font-size:23px}
+.feature-card p{font-size:18px;line-height:1.8}
+.impact-tile h3,.sdg-card h2{font-size:17px}
+.impact-copy-card h2{font-size:22px}
+.text-link{font-size:15px}
+.download-store-link{font-size:16px}
+.download-qr-card>p{font-size:15px}.download-qr-card>a{font-size:14px}
+.footer-contact a{font-size:15px}.footer-bottom{font-size:13px}
+.story-copy h2{font-size:clamp(31px,3.4vw,42px)}
+@media(max-width:640px){body{font-size:17px}.nav-ribbon-inner{font-size:11px}.nav-link{font-size:16px}.nav-cta{font-size:15px}.section-kicker,.hero-eyebrow{font-size:12px}.hero-lede{font-size:18px;line-height:1.8}.hero-copy .button{font-size:16px;min-height:54px}.hero-tagline{font-size:14px}.hero-scroll-note{font-size:12px}.overview-text>p,.showcase-copy>p,.modules-heading>p,.aim-paragraph,.module-card>p,.impact-copy-card p,.impact-board-heading p,.impact-hero-copy>p,.download-copy>p,.story-copy>p{font-size:17px;line-height:1.8}.feature-card h3,.module-card h3{font-size:22px}.feature-card p{font-size:17px}.impact-tile h3{font-size:15px}.sdg-card h2{font-size:15px}.impact-copy-card h2{font-size:21px}.text-link{font-size:15px}.download-qr-card>p{font-size:14px}.download-qr-card>a{font-size:13px}.footer-contact a{font-size:13px}.footer-bottom{font-size:12px}.story-copy h2{font-size:29px}}
+
+/* Final readability bump: keep body copy at 20px desktop / 18px mobile. */
+body{font-size:20px}
+.nav-ribbon-inner{font-size:14px}.nav-link{font-size:18px}.nav-cta{font-size:16px}
+.hero-eyebrow,.section-kicker{font-size:14px}
+.hero-lede{font-size:22px;line-height:1.75}
+.overview-text>p,.showcase-copy>p,.modules-heading>p,.aim-paragraph,.module-card>p,.impact-copy-card p,.impact-board-heading p,.impact-hero-copy>p,.download-copy>p,.story-copy>p{font-size:20px;line-height:1.8}
+.feature-card h3,.module-card h3{font-size:24px}.feature-card p{font-size:19px;line-height:1.8}
+.impact-tile h3,.sdg-card h2{font-size:18px}.impact-copy-card h2{font-size:23px}
+.text-link{font-size:16px}.download-store-link{font-size:17px}
+.download-qr-card>p{font-size:16px}.download-qr-card>a{font-size:15px}
+.footer-contact a{font-size:16px}.footer-bottom{font-size:14px}
+@media(max-width:640px){body{font-size:18px}.nav-ribbon-inner{font-size:12px}.nav-link{font-size:17px}.nav-cta{font-size:16px}.hero-eyebrow,.section-kicker{font-size:13px}.hero-lede{font-size:19px;line-height:1.8}.overview-text>p,.showcase-copy>p,.modules-heading>p,.aim-paragraph,.module-card>p,.impact-copy-card p,.impact-board-heading p,.impact-hero-copy>p,.download-copy>p,.story-copy>p{font-size:18px;line-height:1.8}.feature-card h3,.module-card h3{font-size:23px}.feature-card p{font-size:18px}.impact-tile h3{font-size:16px}.sdg-card h2{font-size:16px}.impact-copy-card h2{font-size:22px}.text-link{font-size:16px}.download-qr-card>p{font-size:15px}.download-qr-card>a{font-size:14px}.footer-contact a{font-size:14px}.footer-bottom{font-size:13px}}
+
+/* Hero mockups: transparent phone cutouts on a clean white field. */
+.hero,
+.hero-product,
+.hero-phones,
+.hero-phone,
+.hero-phone img {
+  background: #fff !important;
+}
+.hero-product {
+  min-height: 600px;
+  width: 100%;
+  margin: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible;
+}
+.hero-product::before,
+.hero-product::after,
+.hero-product-label,
+.hero-product-caption,
+.hero-product .product-orbit {
+  display: none !important;
+}
+.hero-phones {
+  position: relative;
+  height: 570px;
+  padding: 0;
+  overflow: visible;
+  perspective: none;
+}
+.hero-phone {
+  position: relative;
+  width: 280px;
+  height: 550px;
+  padding: 0;
+  overflow: visible;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  filter: none;
+  animation: phone-float 7s ease-in-out infinite;
+}
+.hero-phone img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+.hero-phone-1 { transform: translateX(52px) rotate(-7deg) scale(.84); }
+.hero-phone-2 { transform: translateY(-8px) scale(1.04); }
+.hero-phone-3 { transform: translateX(-52px) rotate(7deg) scale(.84); }
+@media(max-width:900px) {
+  .hero-product { min-height: 475px; }
+  .hero-phones { height: 455px; }
+  .hero-phone { width: 225px; height: 440px; }
+  .hero-phone-1 { transform: translateX(42px) rotate(-7deg) scale(.84); }
+  .hero-phone-2 { transform: translateY(-5px) scale(1.02); }
+  .hero-phone-3 { transform: translateX(-42px) rotate(7deg) scale(.84); }
+}
+@media(max-width:640px) {
+  .hero-product { min-height: 370px; margin: 0; }
+  .hero-phones { height: 360px; }
+  .hero-phone { width: 150px; height: 330px; }
+  .hero-phone-1 { transform: translateX(31px) rotate(-6deg) scale(.82); }
+  .hero-phone-2 { transform: translateY(-3px) scale(1); }
+  .hero-phone-3 { transform: translateX(-31px) rotate(6deg) scale(.82); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-phone { animation: none !important; }
+}
+
+/* Keep app mockups as transparent cutouts throughout the page. */
+.aim-phone-stage {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  isolation: auto;
+}
+.aim-phone-stage::before,
+.aim-phone-stage::after,
+.aim-phone-label,
+.aim-phone-caption {
+  display: none !important;
+}
+.aim-phone-stage > img {
+  filter: none !important;
+}
+.module-art,
+.module-art-1,
+.module-art-2,
+.module-art-3 {
+  background: transparent !important;
+}
+.module-screen-art img {
+  filter: none !important;
+}
+.download-device {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.download-device img {
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+.download-device .device-speaker {
+  display: none !important;
+}
+
+/* Soft oval wash beneath the hero copy, inspired by the supplied reference. */
+.hero-phones {
+  background: transparent !important;
+}
+.hero-product::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 4%;
+  bottom: -3%;
+  width: min(142vw, 1680px);
+  height: auto;
+  transform: translateX(-50%);
+  border: 0 !important;
+  border-radius: 50% 50% 0 0 / 24% 24% 0 0;
+  background:
+    radial-gradient(ellipse at 50% 76%, rgba(185, 223, 195, .43) 0%, rgba(215, 239, 221, .30) 42%, rgba(242, 249, 243, .14) 70%, transparent 100%),
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(238,247,239,.35) 28%, rgba(226,242,230,.52) 100%);
+  box-shadow: none !important;
+  filter: none;
+  animation: hero-wash-breathe 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.hero-product::after {
+  display: none !important;
+}
+.hero-phones {
+  z-index: 1;
+}
+@keyframes hero-wash-breathe {
+  from { opacity: .72; transform: translateX(-50%) scaleX(.985); }
+  to { opacity: 1; transform: translateX(-50%) scaleX(1.015); }
+}
+@media(max-width:640px) {
+  .hero-product::before {
+    top: 0;
+    width: 160vw;
+    border-radius: 50% 50% 0 0 / 18% 18% 0 0;
+    background:
+      radial-gradient(ellipse at 50% 72%, rgba(185, 223, 195, .38) 0%, rgba(215, 239, 221, .28) 50%, transparent 100%),
+      linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(235,246,237,.42) 38%, rgba(226,242,230,.48) 100%);
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-product::before { animation: none !important; }
+}
+
+/* Increase the hero oval's contrast so it reads clearly behind the phones. */
+.hero-product::before {
+  top: -5% !important;
+  bottom: -5% !important;
+  width: min(150vw, 1800px) !important;
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0 !important;
+  background:
+    radial-gradient(ellipse at 50% 76%, rgba(185, 223, 195, .82) 0%, rgba(215, 239, 221, .68) 42%, rgba(235, 246, 237, .46) 68%, rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(232,244,234,.56) 22%, rgba(215,239,221,.72) 100%) !important;
+  opacity: 1 !important;
+  animation: none !important;
+}
+@media(max-width:640px) {
+  .hero-product::before {
+    top: -2% !important;
+    width: 165vw !important;
+    border-radius: 50% 50% 0 0 / 23% 23% 0 0 !important;
+    background:
+      radial-gradient(ellipse at 50% 73%, rgba(185, 223, 195, .75) 0%, rgba(215, 239, 221, .62) 47%, rgba(235, 246, 237, .4) 73%, rgba(255,255,255,0) 100%),
+      linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(232,244,234,.52) 24%, rgba(215,239,221,.66) 100%) !important;
+  }
+}
+
+/* The hero stays plain white without the oval shade. */
+.hero-product::before,
+.hero-product::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+/* Motion feedback remains discoverable with keyboard focus as well as pointer input. */
+.impact-tile-motion { height: 100%; transform-origin: center; }
+a:focus-visible,
+button:focus-visible { outline: 3px solid #26d167; outline-offset: 4px; }
+@media(prefers-reduced-motion:reduce) {
+  .impact-tile-motion { transform: none !important; }
+}
+
+/* Let Motion for Vue own the carousel image transition. */
+.showcase-image > img { animation: none !important; }

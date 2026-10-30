@@ -20,9 +20,9 @@ export const content = {
   ],
   modulesIntro: 'FBSInnova uses three(3) primary modules to enable smallholder-farmers track thier finances, diversify thier crops and maximize income by equipping them with effective entrepreneurial skills.',
   modules: [
-    { title: 'Educational hub', description: 'Get educated', icon: 'set2.4342d752.png', screen: 'greet.jpg' },
-    { title: 'Money-In Money-Out', description: 'Track your finances', icon: 'fin_1.2cc78931.png', screen: 'accounting.jpg' },
-    { title: 'Cropping calendar', description: 'Schedule farm activities', icon: 'fin5.7848c358.png', screen: 'season.jpg' },
+    { title: 'Educational hub', description: 'Get educated', icon: 'set2.4342d752.png', screen: 'greet-transparent.png' },
+    { title: 'Money-In Money-Out', description: 'Track your finances', icon: 'fin_1.2cc78931.png', screen: 'accounting-transparent.png' },
+    { title: 'Cropping calendar', description: 'Schedule farm activities', icon: 'fin5.7848c358.png', screen: 'season-transparent.png' },
   ],
   impacts: [
     { title: 'Livelihood empowerment for farmers', body: '11% of the world’s population live in extreme poverty down from 28% in 1999 according to the UNDP. Globally, more than 800 million people are still living in less than US$ 1.25 a day and many more lack access to adequate food. Food insecurity is therefore a major fundamental issue for which Agro Innova seeks to address. Agro Innova is empowering small-holder farmers to maximize their efficiency through our tailor made technological tools which helps them manage their farms effectively and have access to guaranteed markets through cost reduction solutions and increasing profitability. At Agro Innova, we ensure that our farmers have access to technology and markets that puts them in better position to scale their businesses which helps in the poverty eradication agenda.', image: 'innova1.239b3e1f.png', goal: 'poverty.0195b128.gif', goalNumber: '1', goalTitle: 'No Poverty' },
@@ -37,7 +37,7 @@ export const content = {
 export const sourceImages = {
   hero: 'vue-mk-header.eae115b4.jpg',
   profileHero: 'cocoa_splash.6115e380.jpg',
-  heroMockups: ['farm.jpg', 'greet.jpg', 'accounting.jpg'],
+  heroMockups: ['farm-transparent.png', 'greet-transparent.png', 'accounting-transparent.png'],
   logo: 'fbs_innova_full.90728393.png',
   symbol: 'fbs_innova.56def47d.png',
   slides: ['innova1.239b3e1f.png', 'innova2.4fb5a77e.png', 'innova3.d173da34.png'],

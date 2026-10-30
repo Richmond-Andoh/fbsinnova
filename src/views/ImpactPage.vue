@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next'
+import { motion } from 'motion-v'
 import { RouterLink } from 'vue-router'
 import Reveal from '../components/Reveal.vue'
 import { content, sourceAsset, sourceImages } from '../data/content'
@@ -20,10 +21,10 @@ const scrollToDetails = () => document.getElementById('impact-details')?.scrollI
       <Reveal><div class="impact-board-heading"><span>01 — 04</span><h2>Focus areas</h2><p>Smallholder farmer livelihoods, food security, decent work, and agricultural innovation.</p></div></Reveal>
       <div class="sdg-grid">
         <Reveal v-for="(impact, index) in profileImpacts" :key="impact.title" :delay="index * 70">
-          <button type="button" class="sdg-card" @click="scrollToDetails">
+          <motion.button type="button" class="sdg-card" :while-hover="{ y: -6, scale: 1.02, transition: { type: 'spring', stiffness: 300, damping: 22 } }" :while-tap="{ scale: 0.97 }" @click="scrollToDetails">
             <img :src="sourceAsset(impact.goal)" :alt="`Sustainable Development Goal ${impact.goalNumber}: ${impact.goalTitle}`" loading="lazy" />
             <h2>{{ impact.title }}</h2>
-          </button>
+          </motion.button>
         </Reveal>
       </div>
       <div id="impact-details" class="impact-copy-grid">
