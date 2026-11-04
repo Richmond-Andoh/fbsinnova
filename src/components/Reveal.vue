@@ -3,7 +3,7 @@ import { motion } from 'motion-v'
 import { onMounted, onUnmounted, ref } from 'vue'
 const props = withDefaults(defineProps<{ delay?: number; class?: string }>(), { delay: 0 })
 const element = ref<HTMLElement | null>(null)
-const visible = ref(false)
+const visible = ref(true)
 const reduceMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 let observer: IntersectionObserver | undefined
 onMounted(() => {

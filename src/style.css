@@ -6430,20 +6430,13 @@ body * {
 /* Big Picture: full-height app mockup paired with scroll-revealed purpose statements. */
 .aim {
   padding-block: clamp(82px, 10vw, 136px);
-  background: #fbdfad;
+  background: #fff;
 }
 .aim:before {
   content: none;
 }
 .aim:after {
-  inset: 0;
-  opacity: 0.55;
-  background: repeating-radial-gradient(
-    ellipse at 0% 100%,
-    transparent 0 34px,
-    #2e874f19 35px 36px,
-    transparent 37px 65px
-  );
+  content: none;
 }
 .aim-layout {
   position: relative;
@@ -8064,4 +8057,732 @@ button:focus-visible {
 }
 @media (max-width: 400px) {
   .module-screen-art { height: 320px; }
+}
+
+/* Keep hero copy clear, with a larger, spaced phone row crossing into overview. */
+.hero {
+  position: relative;
+  z-index: auto;
+  overflow: visible;
+  isolation: auto;
+  padding-bottom: 0;
+}
+.hero-inner { gap: 28px; }
+.hero-product {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  height: 460px;
+  min-height: 0;
+  overflow: visible;
+  isolation: auto;
+  margin-inline: 0;
+}
+.hero-phones {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  height: 460px;
+  overflow: visible;
+  z-index: auto;
+  transform: none;
+}
+.hero-phone {
+  flex: 0 1 260px;
+  width: 260px;
+  height: 550px;
+  top: 0;
+  transform: none;
+}
+.hero-phone + .hero-phone { margin-left: -68px; }
+.hero-phone-1,
+.hero-phone-3 {
+  z-index: 0;
+  top: 42px;
+}
+.hero-phone-center-slot {
+  visibility: hidden;
+}
+.hero-phone-1 { transform: rotate(-5deg) scale(.96); }
+.hero-phone-2 {
+  z-index: 3;
+  transform: translateY(-6px) scale(1.02);
+}
+.hero-phone-3 { transform: rotate(5deg) scale(.96); }
+.hero-copy {
+  position: relative;
+  z-index: 5;
+}
+.overview {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  overflow: visible;
+  padding-top: 120px;
+}
+.overview::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #2e874f;
+  pointer-events: none;
+}
+.overview-grid {
+  position: relative;
+  z-index: 2;
+}
+.hero-center-phone {
+  position: absolute;
+  z-index: 3;
+  top: -460px;
+  left: 50%;
+  width: 275px;
+  height: 540px;
+  object-fit: contain;
+  background: transparent;
+  transform: translateX(-50%) scale(1.02);
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .overview { padding-top: 100px; }
+  .hero-product { min-height: 0; }
+  .hero-product,
+  .hero-phones { height: 420px; }
+  .hero-phone { flex-basis: 242px; width: 242px; height: 475px; }
+  .hero-center-phone { top: -420px; width: 242px; height: 475px; }
+}
+@media (max-width: 640px) {
+  .overview { padding-top: 68px; }
+  .hero-inner { gap: 20px; }
+  .hero-product,
+  .hero-phones { height: 220px; }
+  .hero-phones { gap: 0; }
+  .hero-phone + .hero-phone { margin-left: -34px; }
+  .hero-phone-1,
+  .hero-phone-3 { top: 38px; }
+  .hero-phone { flex: 0 1 clamp(94px, 30vw, 132px); width: clamp(94px, 30vw, 132px); height: clamp(205px, 58vw, 275px); }
+  .hero-phone-1 { transform: rotate(-4deg) scale(.96); }
+  .hero-phone-2 { transform: translateY(-4px) scale(1.02); }
+  .hero-phone-3 { transform: rotate(4deg) scale(.96); }
+  .hero-center-phone { top: -220px; width: clamp(108px, 30vw, 132px); height: clamp(230px, 58vw, 275px); }
+}
+@media (max-width: 400px) {
+  .hero-product,
+  .hero-phones { height: 205px; }
+}
+
+/* Core modules: borderless information cards with the traced brand pattern. */
+.modules:before {
+  opacity: 0.14;
+  background: url("/assets/source/pattern.svg") left top / 217px 212px repeat;
+  filter: brightness(0) invert(1);
+  mask-image: linear-gradient(130deg, #000, transparent 82%);
+}
+.module-grid {
+  align-items: stretch;
+  gap: clamp(16px, 2vw, 24px);
+}
+.module-card,
+.module-card:nth-child(2),
+.module-card:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  background: #f2f6f1;
+  color: #202820;
+  box-shadow: none;
+}
+.module-card:before {
+  content: none;
+}
+.module-card:nth-child(2) {
+  background: #f2f6f6;
+}
+.module-card:nth-child(3) {
+  background: #fff9e9;
+}
+.module-card:hover {
+  box-shadow: 0 18px 34px #103e2824;
+}
+.module-pattern-art {
+  flex: 0 0 138px;
+  width: 100%;
+  background-image: url("/assets/source/pattern.svg");
+  background-size: 217px 212px;
+  background-position: 0 0;
+  background-repeat: repeat;
+  opacity: 0.78;
+}
+.module-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 28px 27px;
+}
+.module-top {
+  margin-bottom: 8px;
+}
+.module-top span {
+  color: #2e874f;
+  font: 700 11px "Roboto", Helvetica, sans-serif;
+  letter-spacing: 0.12em;
+}
+.module-card h3 {
+  margin: 0 0 9px;
+  color: #1c281f;
+  font-size: clamp(20px, 1.7vw, 23px);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+.module-card > .module-card-content > p {
+  margin: 0;
+  color: #5e695f;
+  font-size: 15px;
+  line-height: 1.65;
+}
+@media (max-width: 640px) {
+  .module-card,
+  .module-card:nth-child(2),
+  .module-card:nth-child(3) {
+    min-height: 290px;
+  }
+  .module-pattern-art {
+    flex-basis: 120px;
+  }
+  .module-card-content {
+    padding: 18px 22px 23px;
+  }
+}
+
+/* Keep decorative and full-bleed content from creating page-level side scroll. */
+html,
+body,
+#app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Reuse the brand pattern lightly on supporting sections. */
+.trusted {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.trusted::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: url("/assets/source/pattern.svg") left top / 217px 212px repeat;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.trusted-inner {
+  position: relative;
+  z-index: 1;
+}
+.trusted-logos {
+  border-top: 0;
+  border-bottom: 0;
+}
+.download-contours {
+  background: url("/assets/source/pattern.svg") left top / 217px 212px repeat;
+  filter: brightness(0) invert(1);
+  opacity: 0.1;
+}
+.impact-board {
+  position: relative;
+  isolation: isolate;
+}
+.impact-board::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url("/assets/source/pattern.svg") left top / 217px 212px repeat;
+  opacity: 0.055;
+  pointer-events: none;
+}
+.impact-copy-card {
+  border-bottom: 0;
+  box-shadow: 0 8px 24px rgba(27, 57, 37, 0.06);
+}
+.impact-copy-card:hover {
+  box-shadow: 0 13px 28px rgba(27, 57, 37, 0.11);
+}
+.download-store-link {
+  color: #fff;
+}
+
+/* Larger, full-color partner marks remain legible across the logo row. */
+.trusted-logos img {
+  max-width: 180px;
+  height: 78px;
+  filter: none;
+  opacity: 1;
+}
+
+/* Give the Maximum Yield feature cards clear, polished surfaces. */
+.feature-grid {
+  gap: clamp(14px, 1.8vw, 22px);
+  margin-top: clamp(36px, 5vw, 58px);
+  border: 0;
+}
+.feature-card,
+.feature-card:nth-child(2),
+.feature-card:first-child,
+.feature-card:last-child {
+  min-height: 292px;
+  padding: 29px 28px 30px;
+  border: 1px solid rgba(27, 87, 57, 0.1);
+  border-radius: 18px;
+  background: #f7faf5;
+  box-shadow: 0 12px 30px rgba(16, 53, 33, 0.16);
+  transform: none;
+}
+.feature-card:nth-child(2) {
+  background: #f1f7f3;
+}
+.feature-card:nth-child(3) {
+  background: #fbf8ed;
+}
+.feature-card:hover,
+.feature-card:nth-child(2):hover {
+  background: #fff;
+  box-shadow: 0 20px 38px rgba(16, 53, 33, 0.23);
+}
+.feature-card:first-child {
+  padding-left: 28px;
+}
+.feature-card:last-child {
+  border-right: 1px solid rgba(27, 87, 57, 0.1);
+}
+.feature-number {
+  top: 24px;
+  right: 25px;
+  color: #2e874f;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+.feature-icon {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(46, 135, 79, 0.11);
+  border-radius: 20px;
+  background: #e7f1e8;
+  color: #2e874f;
+}
+.feature-icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: #203c2a;
+  font-size: 21px;
+  line-height: 1.3;
+}
+.feature-card p {
+  color: #5f6f63;
+  font-size: 14px;
+  line-height: 1.75;
+}
+@media (max-width: 640px) {
+  .trusted-logos img {
+    max-width: min(110px, calc((100vw - 80px) / 3));
+    height: 58px;
+  }
+  .feature-grid {
+    gap: 14px;
+  }
+  .feature-card,
+  .feature-card:nth-child(2),
+  .feature-card:first-child,
+  .feature-card:last-child {
+    min-height: 0;
+    padding: 24px;
+  }
+  .feature-card:first-child {
+    padding-left: 24px;
+  }
+  .feature-icon {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 18px;
+  }
+}
+
+/* Adopted countries section fills the space left by the former carousel. */
+.adopted-countries {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #f7faf6;
+}
+.adopted-countries::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url("/assets/source/pattern.svg") right top / 217px 212px repeat;
+  opacity: 0.075;
+  pointer-events: none;
+}
+.adopted-countries .page-width {
+  position: relative;
+}
+.countries-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 34px;
+}
+.countries-heading .section-title {
+  margin-top: 14px;
+  font-size: clamp(40px, 5vw, 60px);
+}
+.countries-heading .section-title em {
+  color: #2e874f;
+  font-style: normal;
+}
+.countries-heading > p {
+  max-width: 350px;
+  margin: 0 0 5px;
+  color: #667469;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.country-grid > * {
+  height: 100%;
+}
+.country-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 94px;
+  height: 100%;
+  padding: 16px 18px;
+  border: 1px solid #e6ece5;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 7px 20px rgba(31, 74, 46, 0.045);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.country-card:hover {
+  border-color: #c7ddcb;
+  box-shadow: 0 12px 26px rgba(31, 74, 46, 0.1);
+}
+.country-card.is-hub {
+  border-color: #b5d6bd;
+  background: linear-gradient(110deg, #f1f8f1, #fff 78%);
+}
+.country-card > img {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 36px;
+  border: 1px solid rgba(20, 44, 28, 0.1);
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(20, 44, 28, 0.1);
+}
+.country-name {
+  min-width: 0;
+}
+.country-name h3 {
+  margin: 0;
+  color: #1f3326;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+.country-name > span {
+  display: block;
+  margin-top: 4px;
+  color: #2e874f;
+  font-size: 11px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+.country-hub-mark {
+  display: grid;
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  margin-left: auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #e4f1e5;
+  color: #2e874f;
+  font-size: 12px;
+}
+@media (max-width: 760px) {
+  .countries-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .countries-heading > p {
+    max-width: 480px;
+  }
+  .country-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .country-card {
+    gap: 12px;
+    padding: 14px;
+  }
+}
+@media (max-width: 430px) {
+  .country-grid {
+    grid-template-columns: 1fr;
+  }
+  .country-card {
+    min-height: 82px;
+  }
+}
+
+/* Impact tiles use a soft all-around shadow instead of the yellow base strip. */
+.impact-tile {
+  border-bottom: 0;
+  box-shadow: 0 10px 26px rgba(23, 62, 44, 0.14);
+}
+.impact-tile:hover {
+  box-shadow: 0 16px 30px rgba(23, 62, 44, 0.2);
+}
+
+/* Hero polish: confident type, clear calls to action, and careful spacing. */
+.hero {
+  padding-top: clamp(52px, 6vw, 78px);
+  background: #fff;
+}
+.hero-inner {
+  gap: clamp(20px, 2.4vw, 32px);
+}
+.hero-copy {
+  max-width: 980px;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto 23px;
+  padding: 9px 15px;
+  border: 1px solid #e1ece2;
+  border-radius: 999px;
+  background: #f8fbf8;
+  color: #38734a;
+  font-size: 11px;
+  letter-spacing: 1.35px;
+}
+.hero-copy h1 {
+  max-width: 1050px;
+  margin-bottom: 22px;
+  color: #111813;
+  font-size: clamp(76px, 9vw, 118px);
+  line-height: 0.9;
+  letter-spacing: -0.082em;
+}
+.hero-copy h1 em {
+  color: #2e874f;
+}
+.hero-lede {
+  max-width: 780px;
+  margin-bottom: 27px;
+  color: #56645a;
+  font-size: clamp(18px, 1.55vw, 21px);
+  line-height: 1.72;
+}
+.hero-actions {
+  gap: 13px;
+}
+.hero-copy .button {
+  min-height: 56px;
+  padding: 15px 21px;
+  border: 0;
+  border-radius: 12px;
+  background: #2e874f;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(46, 135, 79, 0.2);
+}
+.hero-copy .button:hover {
+  background: #267444;
+  box-shadow: 0 12px 24px rgba(46, 135, 79, 0.25);
+}
+.hero-secondary {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 17px;
+  border: 1px solid #e0e9e0;
+  border-radius: 12px;
+  color: #263b2d;
+  font-size: 15px;
+  font-weight: 700;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.hero-secondary:hover {
+  border-color: #c9dfce;
+  background: #f4f9f4;
+  color: #2e874f;
+}
+.hero-secondary svg {
+  transition: transform 0.2s ease;
+}
+.hero-secondary:hover svg {
+  transform: translateY(3px);
+}
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 44px;
+  }
+  .hero-eyebrow {
+    margin-bottom: 20px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(62px, 13vw, 78px);
+    line-height: 0.94;
+    margin-bottom: 17px;
+  }
+  .hero-lede {
+    margin-bottom: 21px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .hero-actions {
+    gap: 10px;
+  }
+  .hero-copy .button {
+    min-height: 50px;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  .hero-secondary {
+    min-height: 48px;
+    padding: 11px 13px;
+    font-size: 13px;
+  }
+}
+
+/* Shared shape and interaction style for the site's primary actions. */
+.action-button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 19px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.action-button:hover {
+  transform: translateY(-2px);
+}
+.action-button:active {
+  transform: translateY(0) scale(0.98);
+}
+.action-button svg {
+  flex: 0 0 auto;
+}
+.action-button.action-button-primary {
+  background: #2e874f;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(24, 75, 42, 0.18);
+}
+.action-button.action-button-primary:hover {
+  background: #267444;
+  color: #fff;
+  box-shadow: 0 9px 20px rgba(24, 75, 42, 0.24);
+}
+.action-button.action-button-on-green {
+  background: #206c3d;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(9, 47, 25, 0.25);
+}
+.action-button.action-button-on-green:hover {
+  background: #185a32;
+  color: #fff;
+}
+.action-button.action-button-secondary {
+  border-color: #dce7dd;
+  background: #fff;
+  color: #263b2d;
+  box-shadow: 0 5px 14px rgba(25, 66, 39, 0.05);
+}
+.action-button.action-button-secondary:hover {
+  border-color: #c5dccb;
+  background: #f4f9f4;
+  color: #267444;
+  box-shadow: 0 8px 18px rgba(25, 66, 39, 0.09);
+}
+.nav-cta.action-button,
+.hero-copy .button.action-button,
+.download-store-link.action-button,
+.impact-back.action-button {
+  min-height: 52px;
+  padding: 13px 19px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+.mobile-menu > a.action-button {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+@media (max-width: 640px) {
+  .action-button,
+  .nav-cta.action-button,
+  .hero-copy .button.action-button,
+  .download-store-link.action-button,
+  .impact-back.action-button {
+    min-height: 48px;
+    padding: 11px 15px;
+    font-size: 14px;
+  }
+  .mobile-menu > a.action-button {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
 }

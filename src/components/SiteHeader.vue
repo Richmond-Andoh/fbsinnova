@@ -61,7 +61,7 @@ const goToAim = async () => {
           >About us</a
         >
         <motion.a
-          class="nav-cta"
+          class="nav-cta action-button action-button-primary"
           href="/#download"
           :while-hover="{ y: -2, scale: 1.025 }"
           :while-tap="{ scale: 0.97 }"
@@ -122,7 +122,7 @@ const goToAim = async () => {
         @click="open = false"
         >About us <ArrowUpRight :size="16"
       /></a>
-      <a href="/#download" @click="open = false"
+      <a href="/#download" class="action-button action-button-primary" @click="open = false"
         >Download app <ArrowUpRight :size="16"
       /></a>
       <div class="mobile-socials">

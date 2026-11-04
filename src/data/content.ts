@@ -9,9 +9,20 @@ export const content = {
   },
   description: 'FBSInnova is a functional, modular smartphone application that helps smallholder-farmers have on-demand access to Farmer Business School(FBS) tools and information, plan and efficiently manage their crops and diversify their production for increased profitability and improved livelihoods.',
   features: [
-    { title: 'Get educated', icon: 'set2.4342d752.png', body: 'Daily curated content on technical advice that enlightens the farmer on best farming practices. Education on personal finances and household accounting in terms of savings and spendings.' },
-    { title: 'Track your finances', icon: 'fin_1.2cc78931.png', body: 'The accounting feature allows farmers to track their money in and money out. They are able to monitor their individual crops per plot separately and measure each crop’s finances.' },
-    { title: 'Schedule farm activities', icon: 'fin5.7848c358.png', body: 'They can schedule and track their farm activities and receive prompts before due dates of scheduled activities with best farm practices serving as benchmarks.' },
+    { title: 'Get educated', icon: 'education.svg', body: 'Daily curated content on technical advice that enlightens the farmer on best farming practices. Education on personal finances and household accounting in terms of savings and spendings.' },
+    { title: 'Track your finances', icon: 'track.svg', body: 'The accounting feature allows farmers to track their money in and money out. They are able to monitor their individual crops per plot separately and measure each crop’s finances.' },
+    { title: 'Schedule farm activities', icon: 'schedule.svg', body: 'They can schedule and track their farm activities and receive prompts before due dates of scheduled activities with best farm practices serving as benchmarks.' },
+  ],
+  adoptedCountries: [
+    { name: 'Burkina Faso', flag: 'flags/bf.svg' },
+    { name: 'Cameroon', flag: 'flags/cm.svg' },
+    { name: "Côte d'Ivoire", flag: 'flags/ci.svg' },
+    { name: 'Ghana', flag: 'flags/gh.svg', note: 'Origin & primary hub' },
+    { name: 'Mali', flag: 'flags/ml.svg' },
+    { name: 'Mozambique', flag: 'flags/mz.svg' },
+    { name: 'Namibia', flag: 'flags/na.svg' },
+    { name: 'Nigeria', flag: 'flags/ng.svg' },
+    { name: 'Tunisia', flag: 'flags/tn.svg' },
   ],
   aim: [
     'We aim to solve the major challenge faced by smallholders farmers across Africa - Low crop yield due to lack of technical and entrepreneurial skills.',

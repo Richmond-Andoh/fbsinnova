@@ -36,7 +36,7 @@ const scrollToDetails = () => document.getElementById('impact-details')?.scrollI
           </article>
         </Reveal>
       </div>
-      <RouterLink to="/" class="impact-back"><ArrowRight :size="16" /> Back to FBSInnova</RouterLink>
+      <RouterLink to="/" class="impact-back action-button action-button-primary"><ArrowRight :size="16" /> Back to FBSInnova</RouterLink>
     </section>
   </main>
 </template>
