@@ -8771,6 +8771,10 @@ body,
   justify-content: space-between;
   margin-top: 10px;
 }
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
 @media (max-width: 640px) {
   .action-button,
   .nav-cta.action-button,
@@ -8784,5 +8788,77 @@ body,
   .mobile-menu > a.action-button {
     min-height: 48px;
     padding: 12px 16px;
+  }
+}
+
+/* Make the Maximum Yield cards feel responsive to pointer hover. */
+.feature-card {
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background-color 0.28s ease;
+}
+.feature-card:hover,
+.feature-card:nth-child(2):hover {
+  border-color: rgba(46, 135, 79, 0.28);
+  background: #fff;
+  box-shadow: 0 22px 42px rgba(16, 53, 33, 0.24);
+}
+.feature-icon {
+  transition:
+    transform 0.28s ease,
+    background-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+.feature-icon img {
+  transition: transform 0.28s ease;
+}
+.feature-card:hover .feature-icon {
+  transform: translateY(-3px) rotate(-3deg);
+  background: #dcefe0;
+  box-shadow: 0 8px 18px rgba(46, 135, 79, 0.14);
+}
+.feature-card:hover .feature-icon img {
+  transform: scale(1.1);
+}
+.hero-pattern {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: url("/assets/source/pattern.svg");
+  background-position: left top, right bottom;
+  background-size: 210px 205px;
+  background-repeat: repeat;
+  opacity: 0.075;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 16%,
+    transparent 35%,
+    transparent 65%,
+    #000 84%,
+    #000 100%
+  );
+}
+@media (prefers-reduced-motion: reduce) {
+  .feature-card,
+  .feature-icon,
+  .feature-icon img {
+    transition: none !important;
+  }
+}
+@media (max-width: 640px) {
+  .hero-pattern {
+    background-size: 172px 168px;
+    opacity: 0.045;
+    mask-image: linear-gradient(
+      90deg,
+      #000 0%,
+      transparent 26%,
+      transparent 74%,
+      #000 100%
+    );
   }
 }

@@ -31,6 +31,7 @@ onMounted(async () => {
 <template>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-pattern" aria-hidden="true"></div>
       <div class="page-width hero-inner">
         <div class="hero-copy">
           <Reveal
