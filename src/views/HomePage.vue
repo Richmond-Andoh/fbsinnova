@@ -61,11 +61,12 @@ onMounted(async () => {
                 :while-hover="{ y: -4, scale: 1.035 }"
                 :while-tap="{ scale: 0.97 }"
                 >Get the app <ArrowUpRight :size="18" /></motion.a
-              ><a class="hero-secondary action-button action-button-secondary" href="#modules"
+              ><a
+                class="hero-secondary action-button action-button-secondary"
+                href="#modules"
                 >Explore core modules <ArrowDown :size="16"
-              /></a>
-            </div></Reveal
-          >
+              /></a></div
+          ></Reveal>
         </div>
         <div class="hero-product" aria-label="FBSInnova app screens">
           <div class="hero-phones">
@@ -149,15 +150,24 @@ onMounted(async () => {
       </div>
     </section>
 
-    <section class="adopted-countries section-pad" aria-labelledby="countries-title">
+    <section
+      class="adopted-countries section-pad"
+      aria-labelledby="countries-title"
+    >
       <div class="page-width">
         <Reveal>
           <div class="countries-heading">
             <div>
-              <div class="section-kicker">OUR REACH <span></span> 9 COUNTRIES</div>
-              <h2 id="countries-title" class="section-title">Adopted <em>countries.</em></h2>
+              <div class="section-kicker">
+                OUR REACH <span></span> 9 COUNTRIES
+              </div>
+              <h2 id="countries-title" class="section-title">
+                Adopted <em>countries.</em>
+              </h2>
             </div>
-            <p>Farmer Business School tools serving communities across Africa.</p>
+            <p>
+              Farmer Business School tools serving communities across Africa.
+            </p>
           </div>
         </Reveal>
         <div class="country-grid">
@@ -169,14 +179,26 @@ onMounted(async () => {
             <motion.article
               class="country-card"
               :class="{ 'is-hub': country.note }"
-              :while-hover="{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 24 } }"
+              :while-hover="{
+                y: -4,
+                transition: { type: 'spring', stiffness: 300, damping: 24 },
+              }"
             >
-              <img :src="sourceAsset(country.flag)" :alt="`${country.name} flag`" loading="lazy" />
+              <img
+                :src="sourceAsset(country.flag)"
+                :alt="`${country.name} flag`"
+                loading="lazy"
+              />
               <div class="country-name">
                 <h3>{{ country.name }}</h3>
                 <span v-if="country.note">{{ country.note }}</span>
               </div>
-              <span v-if="country.note" class="country-hub-mark" aria-hidden="true">★</span>
+              <span
+                v-if="country.note"
+                class="country-hub-mark"
+                aria-hidden="true"
+                >★</span
+              >
             </motion.article>
           </Reveal>
         </div>
@@ -245,7 +267,9 @@ onMounted(async () => {
               :while-tap="{ scale: 0.99 }"
               ><div class="module-pattern-art" aria-hidden="true"></div>
               <div class="module-card-content">
-                <div class="module-top"><span>0{{ index + 1 }}</span></div>
+                <div class="module-top">
+                  <span>0{{ index + 1 }}</span>
+                </div>
                 <h3>{{ module.title }}</h3>
                 <p>{{ module.description }}</p>
               </div></motion.article
@@ -273,22 +297,40 @@ onMounted(async () => {
             :key="impact.title"
             :delay="index * 70"
             ><motion.div
-              class="impact-tile-motion"
+              class="impact-card-motion"
               :while-hover="{
-                y: -6,
-                scale: 1.015,
-                transition: { type: 'spring', stiffness: 300, damping: 23 },
+                y: -8,
+                transition: { type: 'spring', stiffness: 300, damping: 22 },
               }"
               :while-tap="{ scale: 0.985 }"
-              ><RouterLink to="/profile" class="impact-tile"
-                ><img
-                  :src="sourceAsset(impact.goal)"
-                  :alt="`SDG ${impact.goalNumber}: ${impact.goalTitle}`"
-                  loading="lazy" />
-                <h3>{{ impact.title }}</h3>
-                <span class="impact-tile-arrow"
-                  ><ArrowUpRight :size="19" /></span></RouterLink></motion.div
-          ></Reveal>
+            >
+              <RouterLink to="/profile" class="impact-sdg-card">
+                <div class="impact-sdg-image">
+                  <img
+                    :src="sourceAsset(impact.goal)"
+                    :alt="`Sustainable Development Goal ${impact.goalNumber}: ${impact.goalTitle}`"
+                    loading="lazy"
+                  />
+                  <div
+                    class="impact-sdg-image-overlay"
+                    aria-hidden="true"
+                  ></div>
+                </div>
+                <div class="impact-sdg-content">
+                  <div class="impact-sdg-head">
+                    <span class="impact-sdg-number"
+                      >SDG {{ impact.goalNumber }}</span
+                    >
+                    <h3 class="impact-sdg-title">{{ impact.goalTitle }}</h3>
+                  </div>
+                  <p class="impact-sdg-desc">{{ impact.title }}</p>
+                  <span class="impact-sdg-cta">
+                    Explore Goal <ArrowUpRight :size="15" />
+                  </span>
+                </div>
+              </RouterLink>
+            </motion.div>
+          </Reveal>
         </div>
       </div>
     </section>

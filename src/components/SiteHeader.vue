@@ -22,7 +22,7 @@ const goToAim = async () => {
   <header class="site-header sticky top-0 z-30">
     <div class="nav-ribbon">
       <div class="nav-ribbon-inner">
-        <span><i></i> Farmer Business School · Ghana</span
+        <span><i></i> FBSInnova · Powered By AgroInnova</span
         ><a href="/#download"
           >Learn, track, diversify <ArrowUpRight :size="13"
         /></a>
@@ -122,7 +122,10 @@ const goToAim = async () => {
         @click="open = false"
         >About us <ArrowUpRight :size="16"
       /></a>
-      <a href="/#download" class="action-button action-button-primary" @click="open = false"
+      <a
+        href="/#download"
+        class="action-button action-button-primary"
+        @click="open = false"
         >Download app <ArrowUpRight :size="16"
       /></a>
       <div class="mobile-socials">
