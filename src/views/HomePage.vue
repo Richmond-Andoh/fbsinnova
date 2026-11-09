@@ -36,8 +36,9 @@ onMounted(async () => {
         <div class="hero-copy">
           <Reveal
             ><div class="eyebrow hero-eyebrow">
-              <span class="eyebrow-dot"></span> FBSINNOVA · FARMER BUSINESS
-              SCHOOL
+              <!-- <span class="eyebrow-dot"></span> FBSINNOVA · FARMER BUSINESS
+              SCHOOL -->
+              <span class="eyebrow-dot"></span> FBSINNOVA ·
             </div></Reveal
           >
           <Reveal :delay="70"

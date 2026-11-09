@@ -60,13 +60,15 @@ const goToAim = async () => {
           rel="noreferrer"
           >About us</a
         >
-        <motion.a
-          class="nav-cta action-button action-button-primary"
-          href="/#download"
-          :while-hover="{ y: -2, scale: 1.025 }"
-          :while-tap="{ scale: 0.97 }"
-          >Download app <ArrowUpRight :size="16"
-        /></motion.a>
+         <motion.a
+           class="nav-cta action-button action-button-primary"
+           :href="content.links.download"
+           target="_blank"
+           rel="noreferrer"
+           :while-hover="{ y: -2, scale: 1.025 }"
+           :while-tap="{ scale: 0.97 }"
+           >Download app <ArrowUpRight :size="16"
+         /></motion.a>
         <span class="nav-socials">
           <a
             :href="content.links.twitter"
@@ -123,7 +125,9 @@ const goToAim = async () => {
         >About us <ArrowUpRight :size="16"
       /></a>
       <a
-        href="/#download"
+        :href="content.links.download"
+        target="_blank"
+        rel="noreferrer"
         class="action-button action-button-primary"
         @click="open = false"
         >Download app <ArrowUpRight :size="16"
